@@ -1,0 +1,26 @@
+
+
+# Project Structure
+ 
+ 
+ The project has the following structure:
+ 
+SuperMarket_Flask/
+│
+├── templates/
+│   ├── index.html
+│   ├── checkout.html
+│   └── pic.html
+│
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   │
+│   ├── js/
+│   │   └── script.js
+│   │
+│   └── json/
+│       └── data.json
+│
+├── app.py
+└── README.md
