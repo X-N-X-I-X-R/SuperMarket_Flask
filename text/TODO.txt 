@@ -1,0 +1,43 @@
+
+full list of todo 
+
+# TODO List for Project
+
+# Page - Checkout and Pay
+# - Design the HTML page for the "Checkout and Pay" page using CSS to make it visually appealing and user-friendly.
+# - Add the option to complete the purchase and make payments using a form or efficient payment methods.
+# - Implement server-side logic to handle the payment process and user authentication.
+# - Allow the option to clear the shopping cart after completing the payment.
+
+# Page - Main
+# - Design the HTML page for the "Main" page using CSS to create a consistent and user-friendly appearance.
+# - Add the option to select products and add them to the shopping cart using JavaScript.
+# - Enable users to view the content of the shopping cart in real-time, including quantities and updated prices.
+
+# CSS - Styling for All Pages
+# - Create a CSS file to style all the pages in the project consistently and provide a good user experience.
+
+# JSON - Managing Data Using JSON
+# - Write functions to read and write data from/to a JSON file for storing information such as products, orders, user details, and more.
+# - Display information from a JSON file in HTML pages using JavaScript.
+
+# Additional Tasks (Choose Three)
+# 1. Implement a user management system and user registration in your project.
+# 2. Complete a comprehensive inventory management system, including inventory analytics, adding/removing products, and managing inventory orders.
+# 3. Add a system for coupons and discounts for products and orders.
+# 4. Implement social media login and registration (Google, Facebook, etc.) for quick user registration and login.
+# 5. Design and add additional pages to the website, such as "About Us," "Contact Us," and more.
+
+# TODO from ChatGPT
+# 1. Create a task list management system.
+# 2. Implement a reminder feature in the task list.
+# 3. Add the ability to prioritize tasks.
+# 4. Allow users to mark tasks as completed.
+# 5. Implement user authentication for task management.
+# 6. Design a user-friendly interface for the task list.
+
+# Feel free to adapt and modify these tasks to fit the specific requirements and scope of your project.
+
+if __name__ == "__main__":
+    # Your code to manage and track TODO tasks can go here.
+    pass
