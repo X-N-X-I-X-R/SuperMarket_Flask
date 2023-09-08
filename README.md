@@ -13,7 +13,7 @@ Running the Application
 Navigating the Pages
 Features
 Contributing
-License
+License.
 Getting Started
 Prerequisites
 Before running the project, make sure you have the following prerequisites installed:
