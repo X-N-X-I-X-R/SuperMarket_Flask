@@ -1,0 +1,77 @@
+body {
+      margin: 0;
+      padding: 0;
+      color: rgb(8, 8, 8);
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      background-color: #f2b64e; /* צבע רקע אפשר לשנות לכל צבע שאתה רוצה */
+  }
+  
+  h1 {
+      font-family: 'cursive', sans-serif; /* שימוש בגופן מותאם אישית (אם יש) ולאחר מכן בגופן ברירת המחדל */
+      text-align: center;
+      text-decoration: underline;
+      color: #241e1d; /* הדגשת צבע לכותרות */
+      font-size: 100px; /* גודל פונט גדול יותר */
+      margin: 0px ; /* מרווחים בחלק העליון והתחתון של הכותרת */
+  }
+  
+  .item-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 110px;
+    
+    
+      
+  }
+  
+  
+  .cart-list li {
+      width: calc(20% - 20px);
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ea1818;
+      border-radius:50px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button {
+      width: calc(10% - 20px); /* שיניתי את רוחב הכפתורים ל-10% */
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
+      background-color: #eaab47;
+      color: #1e1b1b;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  /* סגנון לתיבת הפרטים שנפתחת ברגע שמוסיפים פריט לעגלה */
+.cart-list li form {
+      font-size: 14px; /* גודל הפונט בתיבה */
+      padding: 5px; /* מרווח בתיבה */
+  }
+  /* סגנון לכפתור "Checkout" */
+a.button.btn.btn-primary.button[href="/checkout"] {
+      font-size: 25px;
+      padding: 5px;
+      background-color: #a564eb;
+      color: #00ff26;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+
+    
+
+    
+  }
+  
+  

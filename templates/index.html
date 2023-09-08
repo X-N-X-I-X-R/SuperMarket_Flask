@@ -1,52 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/indexcss.css">
     <title>Shopping Cart</title>
+    <style>
+        html {
+            height: 100%;
+            background-image: url("/static/main.jpg")! important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: rgb(8, 8, 8);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            background: none !important;
+        }
+
+        /* Optional styles for the content inside the body */
+
+        h1 {
+            font-family: cursive;
+            text-align: center;
+            text-decoration: underline;
+        }
+        
+        h2 {
+            font-family: cursive;
+            text-align: center;
+
+            text-decoration: underline;
+            font-size: 40px;
+            font-weight: bold;
+            padding: 10px; /* הוספת מרווחים לתוך הכותרת */
+            border: 20px solid rgb(125, 13, 206); /* הוספת מסגרת מותאמת עם עובי */
+            border-radius: 50px;
+            margin:  auto 500px; /* הוספת מרווח מתחת לכותרת ושימור היאחסון באמצע הדף */
+            display: inline-block; /* הוספת תכונה זו כדי שהמסגרת תתאים בגודל לתוך הכותרת */
+        }
+        
+        
+
+        .item-list,
+        .cart-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+        }
+
+        .product img {
+            padding-left: 470px;
+           
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        /* סגנון לרשימת הפריטים */
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* כדי לסדר את הפריטים במרחב זמין */
+            align-items: flex-start; /* כדי להיות ראשונים במרחב זמין */
+            padding: 110px;
+        }
+
+        .item-list li {
+            width: calc(300% - 100px); /* כדי להתחלק באופן שווה ל-5 פריטים בשורה */
+            margin-right: 1px;
+            margin-bottom: -10px; /* מרווח בין השורות */
+            padding: -100px; /* מרווח פנימי לפריטים */
+            text-align: center;
+            margin-top: 30px;
+        }
+        label{
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(8, 8, 8);
+            text-align: center;
+           
+
+        }
+
+    /* סגנון לרשימת העגלה */
+.cart-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style:circle; /* הסתרת סגנון הרשימה הברירתי */
+    padding: 0; /* הסרת הריונות */
+}
+
+.cart-list li {
+    width: calc(15% - 5px); /* כדי להתחלק באופן שווה ל-4 פריטים בשורה */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px; /* מרווח פנימי לפריטים */
+    text-align: center;
+    background-color: #cdf1c4; /* צבע רקע לפריטים בעגלה */
+    border-radius: 50px; /* סיבוב פינות */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* הוספת צללים */
+}
+
+.cart-list img {
+    max-width: 100%;
+    max-height: 100px; /* הגבלת גודל התמונה לגובה מקסימלי */
+    object-fit: contain; /* התאמת התמונה לקיפול או מתיחה כדי להתאים לגובה המקסימלי */
+}
+
+/* סגנון לכפתור המחיקה */
+.cart-list button {
+    width: 100%; /* אורך הכפתור המחיקה מתאים לרוחב שלו */
+    padding: 10px; /* מרווח בתוך הכפתור */
+    background-color: #dc3545; /* צבע רקע לכפתור המחיקה */
+    color: #fff; /* צבע טקסט בכפתור המחיקה */
+    border: none; /* הסרת מסגרת */
+    border-radius: 5px; /* סיבוב פינות */
+    cursor: pointer; /* הצגת סמן יד מראה (Cursor) כשמעבירים על הכפתור */
+}
+
+        /* סגנון לכפתורים */
+        .button {
+            width: calc(20% - 20px); /* כדי להתחלק באופן שווה ל-5 כפתורים בשורה */
+            margin-right: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        /* כאשר רוחב המסך נמוך מ-768px */
+        @media (max-width: 768px) {
+            html {
+                font-size: 2px; /* דוגמה להקטנת גודל הפונט ב-HTML */
+            }
+
+            /* וכל שאר ההגדרות שברצונך לשנות בעמוד במסך קטן יותר */
+            .item-list {
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .item-list li {
+                width: calc(50% - 20px); /* כדי להתחלק באופן שווה ל-2 פריטים בשורה */
+                margin-right: 10px;
+                margin-bottom: 10px; /* מרווח בין השורות */
+                padding: 20px; /* מרווח פנימי לפריטים */
+                text-align: center;
+            }
+
+            /* סגנון לרשימת העגלה במסך קטן יותר */
+            .cart-list {
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                list-style: circle;
+                width: 100%;
+            }
+
+            .cart-list li {
+                width: calc(90% - 20px); /* כדי להתאים לרוחב המסך הקטן */
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+
+            /* סגנון לכפתורים במסך קטן יותר */
+            .button {
+                width: calc(50% - 20px); /* כדי להתחלק באופן שווה ל-2 כפתורים בשורה */
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                text-align: center;
+            }
+           
+        }
+    </style>
 </head>
-
 <body>
-
     <h1>Items</h1>
-
-    <a href="pic.html" class="button">Go to pic</a>
-
-    <ul>
-        {% for item in items %}
-        <li>
-            {{ item['item'] }} - ${{ item['price'] }}
-            <form method="POST" action="/add_to_cart_app">
-                <input type="hidden" name="item" value="{{ item['item'] }}">
-                <button type="submit">Add to Cart</button>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
-    <h2>Shopping Cart</h2>
-
-    <ul>
-        {% for cart_item in cart %}
-        <li>
-            {{ cart_item['item'] }} - ${{ cart_item['price'] }} ({{ cart_item['quantity'] }} pcs)
-            <form method="POST" action="/delete_item">
-                <input type="hidden" name="item_name" value="{{ cart_item['item'] }}">
-                <label for="quantity">Quantity to Delete:</label>
-                <input type="number" name="quantity" id="quantity" min="1" max="{{ cart_item['quantity'] }}" value="1">
-                <button type="submit">Delete</button>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="tab-content">
+        <ul class="item-list">
+            {% for item in items %}
+            <li>
+                <form method="POST" action="/add_to_cart_app" autocomplete="off">
+                    <div class="product">
+                        <img src="{{ item['image'] }}" alt="{{ item['item'] }}">
+                        <span>{{ item['item'] }} - ${{ item['price'] }}</span>
+                    </div>
+                    <input type="hidden" name="item" value="{{ item['item'] }}">
+                    <button type="submit" class="btn btn-primary button">Add to Cart</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+   
+  
+    </div>
+  
+    <div class="cart-box">
+        <ul class="cart-list">
+            {% for cart_item in cart %}
+            <li>
+                <div class="cart-item">
+                    {{ cart_item['item'] }} - ${{ cart_item['price'] }} ({{ cart_item['quantity'] }} pcs)
+                </div>
+                <form method="POST" action="/delete_item" autocomplete="off">
+                    <input type="hidden" name="item_name" value="{{ cart_item['item'] }}">
+                    <label for="quantity">Quantity to Delete:</label>
+                    <input type="number" name="quantity" id="quantity" min="1" max="{{ cart_item['quantity'] }}"
+                        value="1">
+                    <button type="submit" class="btn btn-danger button">Delete</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <h2>Total Price: ${{ total_price }}</h2>
+    </div>
     
-    <p>Total Price: ${{ total_price }}</p>
-    
-    
-
- 
-
-    <a href="checkout.html"></a>
+    <a href="/checkout" class="btn btn-primary button">Checkout</a>
 </body>
-
 </html>

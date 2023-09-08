@@ -1,0 +1,133 @@
+/* סגנון לטופס */
+.authfy-login {
+      background: rgba(30, 8, 81, 0.9);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      max-width: 600px; /* הוספתי גובה מרבי */
+      margin: 0 auto; /* ניתן למרכז על פי רוחב הדף */
+  }
+  
+/* סגנון לכותרת */
+.auth-title h2 {
+      font-family: 'cursive', sans-serif;
+      color: #00ff2a;
+      font-size: 50px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 40px;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      transition: 30s;
+      border-radius: 50px;
+      border-color: #2b1a55;
+      border-style: double;
+      border-width: 10px;
+      padding: 10px;
+      margin: 10px;
+      position: relative; /* הוספתי זאת */
+    }
+
+    
+  
+  .form-group label {
+       font-family:'cursive', sans-serif;
+      color: #24085c;
+      font-size: 18px; /* גודל התווית */
+  }
+  
+  .form-control {
+       font-family:'cursive', sans-serif;
+      font-size: 16px; /* גודל הטקסט בתיבות הקלט */
+      border: 1.5px solid #5900e7; /* גבול סביב התיבות */
+      border-radius:50px; /* חריצי פינות עגולים */
+      padding: 10px; /* רווח בתוך התיבה */
+  }
+  
+  .demobutton {
+       font-family:'cursive', sans-serif;
+      background: #6a4aed none repeat scroll 0 0;
+      color: #02fe28;
+      display: table;
+      font-size: 16px; /* גודל הכפתור */
+      font-weight: 600;
+      padding: 12px 18px;
+      text-decoration: none;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: -2px; /* מרווח מעל לכפתור */
+      border-radius: 50px; /* חריצי פינות עגולים */
+  }
+  
+  /* סגנון לסרטון */
+  .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+  }
+  
+  .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* סגנון לרקע */
+  body {
+      background-image: url("/static/logp.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+       font-family: 'cursive', sans-serif; /* פונט כללי */
+      font-size: 14px; /* גודל טקסט כללי */
+      font-weight: 400;
+      color: #44525f;
+  }
+  /* סגנון לכלל קישורים בכתובת "/1" */
+a[href="/1"] {
+      font-family:'cursive', sans-serif;
+      background: #6a4aed none repeat scroll 0 0;
+      color: #02fe28;
+      display: table;
+      font-size: 16px; /* גודל הכפתור */
+      font-weight: 600;
+      padding: 12px 18px;
+      text-decoration: none;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: -2px; /* מרווח מעל לכפתור */
+      border-radius: 50px; /* חריצי פינות עגולים */
+    }
+    
+    /* סגנון לכאשר העכבר עובר מעל הכפתור */
+    a[href="/1"]:hover {
+      background-color: #48f286; /* רקע כפתור בעת העברת העכבר */
+      color: #3c0583; /* צבע הטקסט בעת העברת העכבר */
+    }
+    /* סגנון לכפתור Google Maps */
+.btn-google-maps {
+      background-color: #4285f4; /* רקע כפתור */
+      color: #fff; /* צבע הטקסט בכפתור */
+      display: inline-block; /* כדי לגרום ללינק להופיע ככפתור */
+      padding: 12px 18px; /* רווח פנימי בכפתור */
+      text-decoration: none; /* להסיר קווים מתחת לטקסט */
+      border-radius: 5px; /* חריצי פינות עגולות */
+      transition: background-color 0.3s ease, color 0.3s ease; /* אנימציה שתשנה את צבע הרקע והטקסט בעת ההעברה */
+    }
+    
+    /* סגנון לכאשר העכבר עובר מעל הכפתור */
+    .btn-google-maps:hover {
+      background-color: #357ae8; /* רקע כפתור בעת העברת העכבר */
+      color: #fff; /* צבע הטקסט בעת העברת העכבר */
+    }
+    
+    
