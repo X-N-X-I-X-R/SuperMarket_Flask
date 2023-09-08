@@ -12,11 +12,19 @@
 # - Write functions to read and write data from/to a JSON file for storing information such as products, orders, user details, and more.
 # - Display information from a JSON file in HTML pages using JavaScript.
 
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, jsonify
 import json
 
 # יצירת אפליקציה Flask
 app = Flask(__name__)
+
+app.secret_key = 'your_secret_key_here'
+
+@app.before_request
+def set_session_variable():
+    if 'is_playing_music' not in session:
+        session['is_playing_music'] = False
+
 
 # הגדרת רשימת הפריטים הראשונית
 items = [
@@ -62,6 +70,8 @@ def add_to_cart_app():
              
             else:
                 cart.append({'item': item['item'], 'price': item['price'], 'quantity': 1})
+                session['is_playing_music'] = True
+
 
     # Initialize total_price to zero before using it
     total_price = 0
@@ -116,6 +126,8 @@ def good_buy():
 
 
 
+
 if __name__ == "__main__":
+    
     app.run( port= 8000 ,debug=True)
 

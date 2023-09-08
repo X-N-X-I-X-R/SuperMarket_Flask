@@ -187,12 +187,20 @@
             }
            
         }
+        #music-player {
+            display: none; /* הסתרת נגן השיר המוגדר כברירת מחדל */
+        }
     </style>
 </head>
+
+  
 <body>
+
+      
     <h1>Items</h1>
     <div class="tab-content">
         <ul class="item-list">
+            
             {% for item in items %}
             <li>
                 <form method="POST" action="/add_to_cart_app" autocomplete="off">
@@ -201,13 +209,14 @@
                         <span>{{ item['item'] }} - ${{ item['price'] }}</span>
                     </div>
                     <input type="hidden" name="item" value="{{ item['item'] }}">
-                    <button type="submit" class="btn btn-primary button">Add to Cart</button>
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
                 </form>
+                
             </li>
             {% endfor %}
         </ul>
    
-  
+
     </div>
   
     <div class="cart-box">
@@ -231,5 +240,11 @@
     </div>
     
     <a href="/checkout" class="btn btn-primary button">Checkout</a>
+
+    <
+
+    <!-- סקריפט לניגון השיר MP3 -->
+
+
 </body>
 </html>

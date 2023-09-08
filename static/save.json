@@ -1,0 +1,30 @@
+{
+      "products": [
+        {
+          "item": "Coffee",
+          "price": 25,
+          "image": "/static/cuffee.png"
+        },
+        {
+          "item": "Chocolate",
+          "price": 12,
+          "image": "/static/choco.jpeg"
+        },
+        {
+          "item": "Bread",
+          "price": 5,
+          "image": "/static/bread.jpeg"
+        },
+        {
+          "item": "Pasta",
+          "price": 8,
+          "image": "/static/pasta.png"
+        },
+        {
+          "item": "Cereal",
+          "price": 15,
+          "image": "/static/cerial.jpg"
+        }
+      ]
+    }
+    
