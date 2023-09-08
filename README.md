@@ -1,13 +1,12 @@
 # SuperMarket Flask
 # Project Overview
 SuperMarket Flask is a web application for online shopping. It allows users to browse a list of products, add them to a shopping cart, and proceed to checkout and payment. The application is built using the Flask web framework and includes functionality to manage shopping carts, calculate total prices, and handle item removal.
-![One](screenshot/One.png)
-![Two](screenshot/Two.png)
-![Three](screenshot/Three.png)
-![Four](screenshot/Four.png)
-![Five](screenshot/Five.png)
-![Six](screenshot/Six.png)
-
+![](screenshot/one.png)
+![](screenshot/two.png)
+![](screenshot/three.png)
+![](screenshot/four.png)
+![](screenshot/five.png)
+![](screenshot/six.png)
 
 Table of Contents
 Getting Started
