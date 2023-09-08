@@ -99,7 +99,7 @@ a[href="/1"] {
       display: table;
       font-size: 16px; /* גודל הכפתור */
       font-weight: 600;
-      padding: 12px 18px;
+      padding: 22px 25px;
       text-decoration: none;
       text-transform: capitalize;
       text-align: center;
@@ -112,22 +112,42 @@ a[href="/1"] {
     a[href="/1"]:hover {
       background-color: #48f286; /* רקע כפתור בעת העברת העכבר */
       color: #3c0583; /* צבע הטקסט בעת העברת העכבר */
-    }
-    /* סגנון לכפתור Google Maps */
-.btn-google-maps {
-      background-color: #4285f4; /* רקע כפתור */
-      color: #fff; /* צבע הטקסט בכפתור */
-      display: inline-block; /* כדי לגרום ללינק להופיע ככפתור */
-      padding: 12px 18px; /* רווח פנימי בכפתור */
-      text-decoration: none; /* להסיר קווים מתחת לטקסט */
-      border-radius: 5px; /* חריצי פינות עגולות */
-      transition: background-color 0.3s ease, color 0.3s ease; /* אנימציה שתשנה את צבע הרקע והטקסט בעת ההעברה */
+
+    }   /* First style for the link */
+    a[href="https://www.google.com/maps/place/%D7%A2%D7%92%D7%9C%D7%AA+%D7%94%D7%A7%D7%A0%D7%99%D7%95%D7%AA+%D7%A9%D7%9C%D7%9A%E2%80%AD/@32.055893,34.7751037,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4df33711c71f:0xb0f886802ea663a0!8m2!3d32.055893!4d34.7725341!16s%2Fg%2F11f8h_51dr?entry=ttu"] {
+      font-family:'cursive', sans-serif;
+      background: #6a4aed none repeat scroll 10 0;
+      color: #00ff2f;
+      display: table;
+      font-size: 16px; /* גודל הכפתור */
+      font-weight: 600;
+      padding: 22px 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: -20px; /* מרווח מעל לכפתור */
+      border-radius: 50px; /* חריצי פינות עגולים */
+      
+ 
     }
     
-    /* סגנון לכאשר העכבר עובר מעל הכפתור */
-    .btn-google-maps:hover {
-      background-color: #357ae8; /* רקע כפתור בעת העברת העכבר */
-      color: #fff; /* צבע הטקסט בעת העברת העכבר */
+    /* Second style for the same link */
+    a[href="https://www.google.com/maps/place/%D7%A2%D7%92%D7%9C%D7%AA+%D7%94%D7%A7%D7%A0%D7%99%D7%95%D7%AA+%D7%A9%D7%9C%D7%9A%E2%80%AD/@32.055893,34.7751037,17z/data=!3m1!4b1!4m6!3m5!1s0x151d4df33711c71f:0xb0f886802ea663a0!8m2!3d32.055893!4d34.7725341!16s%2Fg%2F11f8h_51dr?entry=ttu"]:hover {
+      background-color: #48f286; /* רקע כפתור בעת העברת העכבר */
+      color: #3c0583; /* צבע הטקסט בעת העברת העכבר */
+
+
+      /* Other styles... */
     }
     
-    
+/* סגנון לכפתורים */
+.btn-container {
+      display: flex;
+      justify-content: space-between; /* מרווח בין הכפתורים */
+  }
+  .btn-container .btn {
+      flex: 1; /* כל כפתור ישתנה בגודל כדי להתאים לרוחב הגוף */
+      margin: 10px; /* מרווח בין הכפתורים */
+  }
+  
